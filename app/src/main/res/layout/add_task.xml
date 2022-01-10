@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddTask">
+
+
+    <TextView
+        android:id="@+id/text_addtask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_addtask"
+        android:textSize="24sp"
+        android:textColor="@color/black"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/str_checkbox_temp" />
+
+    <CheckBox
+        android:id="@+id/checkBox_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/str_checkbox_photo" />
+
+    <CheckBox
+        android:id="@+id/checkBox_noise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/str_checkbox_noise" />
+
+    <CheckBox
+        android:id="@+id/checkBox_lum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/str_checkbox_lum" />
+
+    <CheckBox
+        android:id="@+id/checkBox_urgent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/str_checkbox_urg" />
+
+    <EditText
+        android:id="@+id/DescriptionField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:hint="@string/textfield_description" />
+
+    <Button
+        android:id="@+id/FinalAddButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/LastAddButton" />
+
+    <Button
+        android:id="@+id/btn_previous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/PreviousButton" />
+
+</LinearLayout>

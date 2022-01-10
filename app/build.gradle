@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+
+
+// apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.example.sensingcrowd"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        def appId = "application-1-lcwxh"
+        debug {
+            buildConfigField "String", "MONGODB_REALM_APP_ID", "\"${appId}\""
+        }
+        release {
+            buildConfigField "String", "MONGODB_REALM_APP_ID", "\"${appId}\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+realm {
+    syncEnabled = true
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.android.gms:play-services-maps:18.0.1'
+    implementation 'com.google.android.gms:play-services-location:19.0.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation 'pl.bclogic:pulsator4droid:1.0.3'
+}
